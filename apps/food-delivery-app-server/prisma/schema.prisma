@@ -1,0 +1,50 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DB_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Dish {
+  createdAt DateTime @default(now())
+  id        String   @id @default(cuid())
+  updatedAt DateTime @updatedAt
+}
+
+model Restaurant {
+  createdAt DateTime @default(now())
+  id        String   @id @default(cuid())
+  updatedAt DateTime @updatedAt
+}
+
+model Option {
+  createdAt DateTime @default(now())
+  id        String   @id @default(cuid())
+  updatedAt DateTime @updatedAt
+}
+
+model Offer {
+  createdAt DateTime @default(now())
+  id        String   @id @default(cuid())
+  updatedAt DateTime @updatedAt
+}
+
+model Cart {
+  createdAt DateTime @default(now())
+  id        String   @id @default(cuid())
+  updatedAt DateTime @updatedAt
+}
+
+model Order {
+  createdAt DateTime @default(now())
+  id        String   @id @default(cuid())
+  updatedAt DateTime @updatedAt
+}
+
+model Addon {
+  createdAt DateTime @default(now())
+  id        String   @id @default(cuid())
+  updatedAt DateTime @updatedAt
+}
